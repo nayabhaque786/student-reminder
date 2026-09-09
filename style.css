@@ -84,6 +84,7 @@ body.purple-theme {
   color: #330066;
 }
 
+
 /* ===== Dashboard chart ===== */
 #weekChart{overflow-x:auto}
 #weekChart svg{color:var(--text)}
