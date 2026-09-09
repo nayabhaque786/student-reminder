@@ -289,9 +289,6 @@ function appendMessage(sender, text) {
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-function setTheme(theme) {
-  document.body.className = theme + "-theme";
-}
 
 function sendMessage() {
   const input = document.getElementById("chatInput");
