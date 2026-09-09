@@ -274,3 +274,40 @@ initThemeToggle();
 initBackupControls();
 initNotifications();
 checkDueNotifications();
+
+// Toggle popup
+document.getElementById("chatIcon").onclick = () => {
+  const popup = document.getElementById("chatPopup");
+  popup.style.display = popup.style.display === "none" ? "flex" : "none";
+};
+
+function appendMessage(sender, text) {
+  const chatWindow = document.getElementById("chatWindow");
+  const msg = document.createElement("div");
+  msg.innerHTML = `<b>${sender}:</b> ${text}`;
+  chatWindow.appendChild(msg);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+function sendMessage() {
+  const input = document.getElementById("chatInput");
+  const context = input.value.trim();
+  if (!context) return;
+
+  appendMessage("You", context);
+  input.value = "";
+
+  fetch("http://localhost:5000/api/ai/suggest", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ context })
+  })
+  .then(res => res.json())
+  .then(data => {
+    appendMessage("StudyMate", data.suggestion || "⚠️ No reply received.");
+  })
+  .catch(err => {
+    console.error("Error:", err);
+    appendMessage("StudyMate", "⚠️ Something went wrong.");
+  });
+}

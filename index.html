@@ -5,4 +5,39 @@
 <section class="hero"><div><span class="badge">STUDENT DASHBOARD</span><h2>Your study life, organized.</h2><p>Track deadlines, classes and notes in one simple place.</p></div><div class="hero-icon">📚</div></section>
 <div class="stats"><div class="stat"><span>🔔</span><div><b id="pending">0</b><small>Pending Tasks</small></div></div><div class="stat"><span>✅</span><div><b id="done">0</b><small>Completed</small></div></div><div class="stat"><span>📝</span><div><b id="notes">0</b><small>Saved Notes</small></div></div><div class="stat"><span>📅</span><div><b id="classes">0</b><small>Classes</small></div></div></div>
 <section class="card"><div class="cardhead"><h3>Next 7 Days</h3></div><div id="weekChart"></div></section>
-<div class="grid2"><section class="card"><div class="cardhead"><h3>Upcoming Reminders</h3><a href="reminders.html">View all →</a></div><div id="upcoming"></div></section><section class="card"><div class="cardhead"><h3>Quick Links</h3></div><div class="quick"><a href="reminders.html">🔔<b>Reminders</b><small>Manage assignments & deadlines</small></a><a href="timetable.html">🗓️<b>Timetable</b><small>Plan your weekly classes</small></a><a href="notes.html">📝<b>Notes</b><small>Keep important study notes</small></a></div></section></div></main></div><script src="script.js"></script></body></html>
+<div class="grid2"><section class="card"><div class="cardhead"><h3>Upcoming Reminders</h3><a href="reminders.html">View all →</a></div><div id="upcoming"></div></section><section class="card"><div class="cardhead"><h3>Quick Links</h3></div><div class="quick"><a href="reminders.html">🔔<b>Reminders</b><small>Manage assignments & deadlines</small></a><a href="timetable.html">🗓️<b>Timetable</b><small>Plan your weekly classes</small></a><a href="notes.html">📝<b>Notes</b><small>Keep important study notes</small></a></div></section></div></main></div></body></html> <div id="chatIcon" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+">💬</div>
+
+<div id="chatPopup" style="
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+">
+  <div id="chatWindow" style="flex:1; overflow-y:auto; padding:10px;"></div>
+  <div style="display:flex; gap:5px; padding:10px;">
+    <input id="chatInput" type="text" placeholder="Ask StudyMate..." style="flex:1;" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
