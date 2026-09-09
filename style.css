@@ -57,7 +57,9 @@ html[data-theme="dark"] .day.today{box-shadow:0 0 0 2px #312e81}
   height: 120px;
   border-radius: 50%;
   border: 3px solid #4f46e5;
+  object-fit: cover;
 }
+
 
 body.light-theme {
   background: #ffffff;
