@@ -1,1 +1,49 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>StudyMate - Notes</title><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#4f46e5"><link rel="apple-touch-icon" href="icon-192.png"><link rel="stylesheet" href="style.css"></head><body><div class="app"><aside class="sidebar"><div class="brand"><div class="logo">✓</div><div><b>StudyMate</b><small>Student Planner</small></div></div><nav><a href="index.html">🏠 Dashboard</a><a href="reminders.html">🔔 Reminders</a><a href="timetable.html">🗓️ Timetable</a><a href="notes.html">📝 Notes</a><a href="profile.html">👤 Profile</a></nav></aside><main class="main"><header><div><h1>📝 Notes</h1><p>Save quick study notes, ideas and important points.</p></div><button class="themebtn" id="themeToggle" title="Toggle dark mode">🌙</button></header><section class="card"><h3>Create Note</h3><form id="noteForm"><input id="noteTitle" placeholder="Note title" required><textarea id="noteText" placeholder="Write your note here..." required></textarea><button class="primary" type="submit">+ Save Note</button></form></section><input id="noteSearch" placeholder="🔍 Search notes..."><section class="notesgrid" id="notesList"></section></main></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>StudyMate - Notes</title>
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#4f46e5">
+        <link rel="apple-touch-icon" href="icon-192.png">
+        <link rel="stylesheet" href="style.css"></head>
+        <body><div class="app">
+            <aside class="sidebar">
+                <div class="brand">
+                    <div class="logo">✓</div>
+                    <div><b>StudyMate</b>
+                        <small>Student Planner</small>
+                    </div>
+                </div>
+                <nav>
+                    <a href="index.html">🏠 Dashboard</a>
+                    <a href="reminders.html">🔔 Reminders</a>
+                    <a href="timetable.html">🗓️ Timetable</a>
+                    <a href="notes.html">📝 Notes</a>
+                    <a href="profile.html">👤 Profile</a>
+                </nav>
+            </aside>
+            <main class="main">
+                <header>
+                    <div>
+                        <h1>📝 Notes</h1>
+                        <p>Save quick study notes, ideas and important points.</p>
+                    </div>
+                    <button class="themebtn" id="themeToggle" title="Toggle dark mode">🌙</button>
+                </header>
+                <section class="card">
+                    <h3>Create Note</h3>
+                    <form id="noteForm">
+                        <input id="noteTitle" placeholder="Note title" required>
+                        <textarea id="noteText" placeholder="Write your note here..." required></textarea>
+                        <button class="primary" type="submit">+ Save Note</button>
+                    </form>
+                </section>
+                <input id="noteSearch" placeholder="🔍 Search notes...">
+                <section class="notesgrid" id="notesList"></section>
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
